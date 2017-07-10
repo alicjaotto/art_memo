@@ -98,6 +98,8 @@
             tiles_pairs++
             if (tiles_pairs >= tiles_total/2) {
                 $('#timeline').toggleClass('hidden');
+                $('#board').toggleClass('hidden');
+                $('header').toggleClass('hidden');
             }
 
             canTake=true;

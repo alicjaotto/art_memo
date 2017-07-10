@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name=”viewport”, content=”initial-scale=1.0”, content=”width=device-width” >
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Homemade+Apple" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <title>ART memo</title>
@@ -11,19 +11,29 @@
 <body>
 
     <header>
-        <div id="qoute">
-            <p>The purpose of art is washing the dust of daily life off our souls.</p>
-            <span> Pablo Picasso </span>
+        <div class="container">
+            <p id="quote">The purpose of art is washing the dust of daily life off our souls.</p>
+            <span id="author"> Pablo Picasso </span>
         </div>
     </header>
-    <section id="board">
+
+    <section id="board" class="">
         <div class="tile"></div>
     </section>
 
     <section id="timeline" class="hidden">
+        <div class = "container">
+            <div class="baseline"></div>
+            <div class="refresh">
+                <input type="button" value="play again" onClick="window.location.reload()">
+            </div>
+        </div>
     </section>
+
     <footer>
-        <span> Copyright 2017 Alicja Otto</span>
+        <div class="container">
+            <span class="copyright"> CopyrightⒸ2017 Alicja Otto</span>
+        </div>
     </footer>
 
 
