@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+#quote {
+    margin:0 auto;
+    position: relative;
+}
+
+p {
+    font-family: 'Homemade Apple';
+    font-size: 1.8em;
+}
+
+#board {
+    margin:0 auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    width: 940px;
+    height: 480px;
+    border: 1px solid #fff;
+
+}
+
+.tile {
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: url(../images/rsz_cover.jpg) center center no-repeat;
+    margin: 0;
+}
+
+.tile:hover {
+    -webkit-transform: rotateZ(-5deg);
+        -ms-transform: rotateZ(-5deg);
+        transform: rotateZ(-5deg);
+        /*-webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);*/
+}
