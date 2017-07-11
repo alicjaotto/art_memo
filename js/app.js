@@ -1,5 +1,34 @@
 (function(){
 
+//header - random quotes
+    const quotes = [
+        {
+            quote: "The purpose of art is washing the dust of daily life off our souls.",
+            author: "Pablo Picasso"
+        },
+        {
+            quote: "A picture is a poem without words.",
+            author: "Horace"
+        },
+        {
+            quote: "The work of art is a scream of freedom.",
+            author: "Christo"
+        },
+        {
+            quote: "The art of a people is a true mirror of their minds.",
+            author: "Jawaharlal Nehru"
+        },
+        {
+            quote: "Painting is self-discovery. Every good artist paints what he is.",
+            author: "Jackson Pollock"
+        }
+    ];
+
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    $('#quote').text(randomQuote.quote);
+    $('#author').text(randomQuote.author);
+
+    //GAME//
     const tiles_total = 32;
     const tiles_row = 8;
     var tiles = [];
@@ -37,7 +66,6 @@
             tiles.push(Math.floor(i/2));
 
         }
-        console.log(tiles);
 
         for (var i=tiles_total-1; i>0; i--) {
             var swap = Math.floor(Math.random()*i);
@@ -63,7 +91,6 @@
     }
 
     function clickTheTile(element) {
-        console.log(element.data('cardType') + "clicked");
 
         if (canTake) {
             if (!tiles_taken[0] || (tiles_taken[0].data('index') != element.data('index'))) {

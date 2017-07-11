@@ -5,6 +5,7 @@
     <meta name=”viewport”, content=”initial-scale=1.0”, content=”width=device-width” >
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Homemade+Apple" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <title>ART memo</title>
 </head>
@@ -12,8 +13,8 @@
 
     <header>
         <div class="container">
-            <p id="quote">The purpose of art is washing the dust of daily life off our souls.</p>
-            <span id="author"> Pablo Picasso </span>
+            <p id="quote"></p>
+            <span id="author"></span>
         </div>
     </header>
 
@@ -21,7 +22,7 @@
         <div class="tile"></div>
     </section>
 
-    <section id="timeline" class="hidden ">
+    <section id="timeline" class="hidden">
         <div class = "container">
             <div class="baseline"></div>
             <div class="refresh">

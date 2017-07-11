@@ -9,7 +9,6 @@
   width: 940px;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1100px;
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
@@ -19,7 +18,7 @@
     display: none;
 }
 
-/*header*/ 
+/*header*/
 #quote {
     font-family: 'Homemade Apple', cursive;
     font-size: 1.7em;
@@ -84,12 +83,14 @@
 }
 
 .refresh {
-    margin: 0 auto;
-    width: 1px;
+    width: 100%;
+    position: relative;
+    height: auto;
 }
 
 .refresh input {
     height: auto;
+    float: right;
     background-color: #000;
     color: white;
     width: auto;
