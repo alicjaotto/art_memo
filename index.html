@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name=”viewport”, content=”initial-scale=1.0”, content=”width=device-width” >
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Homemade+Apple" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name=”viewport”, content=”initial-scale=1.0”, content=”width=device-width” >
+		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Homemade+Apple" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
-    <title>ART memo</title>
-</head>
-<body>
+		<title>ART memo</title>
+	</head>
+	<body>
 
-    <header>
-        <div class="container">
-            <p id="quote"></p>
-            <span id="author"></span>
-        </div>
-    </header>
+		<header>
+			<div class="container">
+				<p id="quote"></p>
+				<span id="author"></span>
+			</div>
+		</header>
 
-    <section id="board" class="">
-        <div class="tile"></div>
-    </section>
+		<section id="board" class="">
+			<div class="tile"></div>
+		</section>
 
-    <section id="timeline" class="hidden">
-        <div class = "container">
-            <div class="baseline"></div>
-            <div class="refresh">
-                <input type="button" value="play again" onClick="window.location.reload()">
-            </div>
-        </div>
-    </section>
+		<section id="timeline" class="hidden">
+			<div class = "container">
+				<div class="art-memo__timeline">
+					<div id="baseline"
+						class="art-memo__timeline__baseline">
+					</div>
+					<div id="period" class="art-memo__timeline__period hidden">
+						<div class="art-memo__timeline__period__line"></div>
+						<div class="art-memo__timeline__period__image"></div>
+						<div class="art-memo__timeline__period__description">
+							<span class="art-memo__timeline__period__description__name">impressionism</span>
+							<span class="art-memo__timeline__period__descriotion__time">1874-1886</span>
+							<span class="art-memo__timeline__period__description__artist">Claude Monet</span>
+							<span class="art-memo__timeline__period__description__piece">Impression</span>
+							<span class="art-memo__timeline__period__description__date">1872</span>
+						</div>
+					</div>
+				</div>
 
-    <footer>
-        <div class="container">
-            <span class="copyright"> CopyrightⒸ2017 Alicja Otto</span>
-        </div>
-    </footer>
+					<div class="art-memo__timeline__refresh">
+						<input type="button"
+							value="play again"
+							onClick="window.location.reload()"
+							class="art-memo__timeline__refresh__button">
+					</div>
+				</div>
+			</div>
+		</section>
 
-<script src="js/out.js"></script>
+		<footer>
+			<div class="container">
+				<span class="copyright"> CopyrightⒸ2017 Alicja Otto</span>
+			</div>
+		</footer>
 
-</body>
+	<script src="js/out.js"></script>
+
+	</body>
 </html>
