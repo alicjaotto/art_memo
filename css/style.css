@@ -88,7 +88,7 @@
 
 .art-memo__timeline__period__dot {
 	background: #fff;
-	border: 3px solid black;
+	border: 5px solid black;
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
@@ -98,8 +98,45 @@
 	height: 30px;
 }
 
-.art-memo__timeline__period__content {	
+.art-memo__timeline__period__content {
+	margin: 0 2em;
+	width: 45%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
+
+.art-memo__timeline__period__content__image {
+	width: 160px;
+	height: 160px;
+	background: url(../assets/img/tile_4.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.art-memo__timeline__period__content__description {
+	margin-left: 1.4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.art-memo__timeline__period__content__description__main {
+
+}
+
+.art-memo__timeline__period__content__description__main__name {
+	font-size: 1.7em;
+	font-family: 'Homemade Apple', cursive;
+}
+
+.art-memo__timeline__period__content__description__main__date {
+	font-family: 'Cutive Mono',monospace;
+}
+
+.art-memo__timeline__period__content__description__additional {
+
+}
+
 
 .art-memo__timeline__refresh {
 	position: relative;

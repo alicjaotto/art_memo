@@ -161,14 +161,17 @@
 	function showTimeline() {
 		$('#timeline').toggleClass('hidden');
 		$('#board').toggleClass('hidden');
-		$('header').toggleClass('hidden');
 		createPeriodLines();
 	}
 
+//temporarily! it will iterate over array of obejects to create each period show them with a delay
 	function createPeriodLines() {
 		window.setTimeout(function() {
-			$('#period').toggleClass('hidden');
+			$('#period_1').toggleClass('hidden');
 		}, 1000);
+		window.setTimeout(function() {
+			$('#period_2').toggleClass('hidden');
+		}, 2000);
 	}
 
 	$(document).ready(function() {
