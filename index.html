@@ -4,8 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name=”viewport”, content=”initial-scale=1.0”, content=”width=device-width” >
 		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Homemade+Apple" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 		<title>ART memo</title>
 	</head>
@@ -24,56 +26,26 @@
 
 		<section id="timeline" class="hidden">
 			<div class = "container">
-				<div class="art-memo__timeline">
-					<div id="period_1" class="art-memo__timeline__period hidden">
-						<div class="art-memo__timeline__period__dot"></div>
-						<div class=art-memo__timeline__period__content>
-							<div class="art-memo__timeline__period__content__image"></div>
-							<div class="art-memo__timeline__period__content__description">
-								<div class=art-memo__timeline__period__content__description__main>
-									<div class="art-memo__timeline__period__content__description__main__name">impressionism</div>
-									<div class="art-memo__timeline__period__content__description__main__time">1874-1886</div>
-								</div>
-								<div class="art-memo__timeline__period__content__description__additional">
-									<div class="art-memo__timeline__period__content__description__additional__artist">Claude Monet</div>
-									<div class="art-memo__timeline__period__content__description__additional__piece">Impression</div>
-									<div class="art-memo__timeline__period__content__description__additional__date">1872</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="period_2" class="art-memo__timeline__period hidden">
-						<div class="art-memo__timeline__period__dot"></div>
-						<div class="art-memo__timeline__period__content">
-							<div class="art-memo__timeline__period__content__image"></div>
-							<div class="art-memo__timeline__period__content__description">
-								<div class=art-memo__timeline__period__content__description__main>
-									<div class="art-memo__timeline__period__content__description__main__name">impressionism</div>
-									<div class="art-memo__timeline__period__content__description__main__time">1874-1886</div>
-								</div>
-								<div class="art-memo__timeline__period__content__description__additional">
-									<div class="art-memo__timeline__period__content__description__additional__artist">Claude Monet</div>
-									<div class="art-memo__timeline__period__content__description__additional__piece">Impression</div>
-									<div class="art-memo__timeline__period__content__description__additional__date">1872</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div id="periods" class="art-memo__timeline">
 
-					<div class="art-memo__timeline__refresh">
-						<input type="button"
-							value="play again"
-							onClick="window.location.reload()"
-							class="art-memo__timeline__refresh__button">
-					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="reload" class="hidden">
+			<div class="container">
+				<div class="art-memo__reload">
+					<input type="button"
+						value="play again"
+						onClick="window.location.reload()"
+						class="art-memo__reload__button">
 				</div>
 			</div>
 		</section>
 
 		<footer>
 			<div class="container">
-				<span class="copyright"> CopyrightⒸ2017 Alicja Otto</span>
+				<span class="copyright"> CopyrightⒸ2018 Alicja Otto</span>
 			</div>
 		</footer>
 

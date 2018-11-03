@@ -99,19 +99,117 @@
 
 	//timeline
 	var ART_PERIODS = [{
+		id: 1,
+		name: 'renaissance',
+		time: ' 1400-1600',
+		artist: 'Sandro Botticelii',
+		piece: 'Madonna of the Book',
+		date: '1480-1483'
+	}, {
+		id: 2,
+		name: 'baroque',
+		time: '1600-1710',
+		artist: 'Caravaggio',
+		piece: 'Judith Beheading Holofernes',
+		date: '1599–1602'
+	}, {
+		id: 3,
+		name: 'rococo',
+		time: '1720-1790',
+		artist: 'Jean-Honoré Fragonard',
+		piece: 'The Swing',
+		date: '1767'
+	}, {
+		id: 4,
+		name: 'classicism',
+		time: '1750‒1800',
+		artist: 'Jacques-Louis David',
+		piece: 'Oath of the Horatii',
+		date: '1784'
+	}, {
+		id: 5,
+		name: 'romanticism',
+		time: '1790s-1840s',
+		artist: 'Caspar David Friedrich',
+		piece: 'The Sunset or Brothers',
+		date: '1830-1835'
+	}, {
+		id: 6,
+		name: 'realism',
+		time: '1850s',
+		artist: 'Jean-François Millet',
+		piece: 'The Gleaners',
+		date: '1857'
+	}, {
+		id: 7,
 		name: 'impressionism',
 		time: ' 1874-1886',
 		artist: 'Claude Monet',
 		piece: 'Impression, soleil levant',
-		date: '1872',
-		image: './assets/img/tile_10.jpg'
+		date: '1872'
 	}, {
+		id: 8,
 		name: 'postimpressionism',
 		time: '1886-1905',
 		artist: 'Vincent van Gogh',
 		piece: 'Wheat Field with Cypresses',
-		date: '1889',
-		image: './assets/img/tile_7.jpg'
+		date: '1889'
+	}, {
+		id: 9,
+		name: 'symbolism',
+		time: 'from 1886',
+		artist: 'Hugo Simberg',
+		piece: 'The Wounded Angel',
+		date: '1903'
+	}, {
+		id: 10,
+		name: 'fauvism',
+		time: '1905–1908',
+		artist: 'Henri Matisse',
+		piece: 'View of Collioure',
+		date: '1905'
+	}, {
+		id: 11,
+		name: 'cubism',
+		time: '1907-1920',
+		artist: 'Pablo Picasso',
+		piece: 'Girl with a Mandolin',
+		date: '1910'
+	}, {
+		id: 12,
+		name: 'abstract-art',
+		time: '1910-1925',
+		artist: 'Vassily Kandinsky',
+		piece: 'On White II',
+		date: '1910'
+	}, {
+		id: 13,
+		name: 'art-déco',
+		time: '1919-1939',
+		artist: 'Tamara de Lempicka',
+		piece: 'The sleeping girl',
+		date: '1930'
+	}, {
+		id: 14,
+		name: 'surrealism',
+		time: '1924-1953',
+		artist: 'Salvador Dalí',
+		piece: 'The persistance of memory',
+		date: '1931'
+	}, {
+		id: 15,
+		name: 'abstract-expressionism',
+		time: '1940s',
+		artist: 'Jackson Pollock',
+		piece: 'No. 5',
+		date: '1948'
+	}, {
+		id: 16,
+		name: 'pop-art',
+		time: '1950-1970',
+		artist: 'Andy Warhol',
+		piece: 'Marilyn Monroe (Marilyn)',
+		date: '1967'
 	}];
 
 	//GAME//
@@ -212,17 +310,27 @@
 	function showTimeline() {
 		$('#timeline').toggleClass('hidden');
 		$('#board').toggleClass('hidden');
-		createPeriodLines();
+		$('#reload').toggleClass('hidden');
+		createPeriods();
 	}
 
-	//temporarily! it will iterate over array of obejects to create each period show them with a delay
-	function createPeriodLines() {
-		window.setTimeout(function () {
-			$('#period_1').toggleClass('hidden');
-		}, 1000);
-		window.setTimeout(function () {
-			$('#period_2').toggleClass('hidden');
-		}, 2000);
+	function createPeriods() {
+		ART_PERIODS.forEach(function (period) {
+			var name = period.name;
+			var time = period.time;
+			var artist = period.artist;
+			var piece = period.piece;
+			var date = period.date;
+			var side = 'left';
+			if (period.id % 2 === 0) {
+				side = 'right';
+			}
+
+			var newPeriod = '<div class="art-memo__timeline__period" data-aos="fade-up" data-aos-duration="1500"><div class="art-memo__timeline__period__dot art-memo__timeline__period__dot--' + name + '"></div><div class="art-memo__timeline__period__content art-memo__timeline__period__content--' + side + '"><div class="art-memo__timeline__period__content__main"><div class="art-memo__timeline__period__content__main__name">' + name + '</div><div class="art-memo__timeline__period__content__main__time">' + time + '</div></div><div class="art-memo__timeline__period__content__additional"><div class="art-memo__timeline__period__content__additional__artist">' + artist + '</div><div class="art-memo__timeline__period__content__additional__piece">' + piece + '</div><div class="art-memo__timeline__period__content__additional__date">' + date + '</div></div></div></div>';
+
+			$('#periods').append(newPeriod);
+			AOS.init();
+		});
 	}
 
 	$(document).ready(function () {
