@@ -73,9 +73,8 @@
 "use strict";
 
 
-(function () {
-
-	//header - random quotes
+(function ($, window, document) {
+	//quotes
 	var quotes = [{
 		quote: "The purpose of art is washing the dust of daily life off our souls.",
 		author: "Pablo Picasso"
@@ -222,6 +221,16 @@
 	var BACKGROUND_PATH = './assets/img/';
 	var backgrounds = [BACKGROUND_PATH + 'tile_1.jpg', BACKGROUND_PATH + 'tile_2.jpg', BACKGROUND_PATH + 'tile_3.jpg', BACKGROUND_PATH + 'tile_4.jpg', BACKGROUND_PATH + 'tile_5.jpg', BACKGROUND_PATH + 'tile_6.jpg', BACKGROUND_PATH + 'tile_7.jpg', BACKGROUND_PATH + 'tile_8.jpg', BACKGROUND_PATH + 'tile_9.jpg', BACKGROUND_PATH + 'tile_10.jpg', BACKGROUND_PATH + 'tile_11.jpg', BACKGROUND_PATH + 'tile_12.jpg', BACKGROUND_PATH + 'tile_13.jpg', BACKGROUND_PATH + 'tile_14.jpg', BACKGROUND_PATH + 'tile_15.jpg', BACKGROUND_PATH + 'tile_16.jpg'];
 
+	//events
+	$('#skip-button').on('click', function () {
+		showTimeline();
+	});
+
+	//ready
+	$(function () {
+		startGame();
+	});
+
 	function startGame() {
 
 		var board = $('#board').empty();
@@ -311,6 +320,7 @@
 		$('#timeline').toggleClass('hidden');
 		$('#board').toggleClass('hidden');
 		$('#reload').toggleClass('hidden');
+		$('#skip').toggleClass('hidden');
 		createPeriods();
 	}
 
@@ -332,11 +342,7 @@
 			AOS.init();
 		});
 	}
-
-	$(document).ready(function () {
-		startGame();
-	});
-})();
+})(window.jQuery, window, document);
 
 /***/ })
 /******/ ]);

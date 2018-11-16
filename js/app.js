@@ -1,6 +1,5 @@
-(function(){
-
-//header - random quotes
+(function($, window, document) {
+//quotes
 	const quotes = [
 		{
 			quote: "The purpose of art is washing the dust of daily life off our souls.",
@@ -187,6 +186,16 @@
 		BACKGROUND_PATH + 'tile_16.jpg'
 	];
 
+//events
+	$('#skip-button').on('click', function() {
+		showTimeline();
+	});
+
+//ready
+	$(function() {
+		startGame();
+	});
+
 	function startGame() {
 
 		var board = $('#board').empty();
@@ -274,6 +283,7 @@
 		$('#timeline').toggleClass('hidden');
 		$('#board').toggleClass('hidden');
 		$('#reload').toggleClass('hidden');
+		$('#skip').toggleClass('hidden');
 		createPeriods();
 	}
 
@@ -296,7 +306,4 @@
 		});
 	}
 
-	$(document).ready(function() {
-		startGame();
-	});
-})();
+}(window.jQuery, window, document));

@@ -255,7 +255,8 @@
 	height: auto;
 }
 
-.art-memo__reload__button {
+.art-memo__reload__button,
+.art-memo__skip__button {
 	height: auto;
 	float: right;
 	background-color: #000;
@@ -269,7 +270,8 @@
 	padding: 10px;
 }
 
-.art-memo__reload__button:hover {
+.art-memo__reload__button:hover,
+.art-memo__skip__button:hover {
 	background-color: #fff;
 	color: #000;
 	box-shadow: 0 0 0 1px black inset;
